@@ -16,7 +16,7 @@ Using Selenium and BeautifulSoup, I scraped data off openpowerlifting.org and da
 
 26 columns:
 * **Provided data:** *Federation, Date, Location, Sex, Age, Equip, Class, Weight, Squat, Bench, Deadlift, Total, Dots (score)*
-* **Engineered columns from competition history:** *Squat average across previous competitions excluding the best, Bench average excluding best, Deadlift average excluding best, Squat average standard deviation, Bench average standard deviation, Deadlift average standard deviation, Second best squat, Second best bench, Second best deadlift, Squat average rate of change, Bench avg. rate of change, Deadlift avg. rate of change, Count of competition history*
+* **Engineered columns from competition history:** *Squat/Bench/Deadlift averages across previous competitions excluding the best, Squat/Bench/Deadlift averages of standard deviation across previous competitions across the best, Second best squat/bench/deadlift, Squat/Bench/Deadlift average rates of change across previous competitions, Count of competition history*
 
 ## Data Cleaning
 * Dropped duplicate powerlifters
