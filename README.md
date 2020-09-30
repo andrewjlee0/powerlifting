@@ -23,6 +23,7 @@ I created 24 columns:
 * Filled missing Class values by calculating from Weight
 * Cleaned Age column and recast to int type
 * Recast Date column to datetime object
+* Recast Class column to string type
 * Imputed remaining nulls with MICE
 
 ## Feature Engineering
@@ -31,8 +32,8 @@ I created 24 columns:
 
 ## Exploratory Data Analysis
 * Observed the distributions of continuous variables and the counts of categoricals
-* Created scatterplots of each continuous variable against the DVs, as well as correlation dataframes
-* Created box and violin plots of categorical variables against the DVs, as well as pivot tables
+* Created correlation dataframes and scatterplots of each continuous variable against the DVs
+* Created pivot tables and box and violin plots of categorical variables against the DVs
 * Ran Kruskal-Wallis H-tests to observe if differences exist in the medians
 
 **Some interesting takeaways (more included in file):**
@@ -46,7 +47,7 @@ I created 24 columns:
 
 * Wearing wraps boosts one's performance on squat, bench, and deadlift, as opposed to not wearing wraps.
 
-![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/wraps_against_squat.png) <!-- .element height="80%" width="80%" -->
+![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/wraps_against_squat.png) <!-- .element height="60%" width="60%" -->
 
 * Some nationalities are much stronger on-average than others, and others are much weaker on-average than others. Crucially, these nationalities have very few competitors and are unlikely to be representative of the population (<5). With more competitors, we should expect a regression to the mean, and thus, smaller differences in strength between nationalities.
 
