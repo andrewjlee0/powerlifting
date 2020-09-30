@@ -51,8 +51,8 @@ I created 24 columns:
   * Powerlifters are strong all-around and well-proportioned
   * The past reliably predicts the future
 
-![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/squat_avg_avg_against_squat.png) <!-- .element height="60%" width="60%" -->
-![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/squat_corr.png) <!-- .element height="60%" width="60%" -->
+![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/squat_avg_avg_against_squat.png) <!-- .element height="50%" width="50%" -->
+![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/squat_corr.png) <!-- .element height="50%" width="50%" -->
 
 * Wearing wraps boosts one's performance on squat, bench, and deadlift, as opposed to not wearing wraps.
 
