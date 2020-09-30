@@ -14,8 +14,8 @@
 ## Web Scraping
 Using Selenium and BeautifulSoup, I scraped off data from openpowerlifting.org and the interconnected links to each powerlifter's competition history.
 
-I created 26 columns:
-* **Provided data:** *Federation, Date, Location, Sex, Age, Equip, Class, Weight, Squat, Bench, Deadlift, Total, Dots (score)*
+I created 24 columns:
+* **Provided data:** *Federation, Date, Location, Sex, Age, Equip, Class, Weight, Squat, Bench, Deadlift*
 * **Engineered from competition history:** *Squat/Bench/Deadlift averages across previous competitions, Squat/Bench/Deadlift averages of standard deviation across previous competitions across the best, Second best squat/bench/deadlift, Squat/Bench/Deadlift average rates of change across previous competitions, Count of competition history*
 
 ## Data Cleaning
