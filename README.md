@@ -15,8 +15,13 @@
 Using Selenium and BeautifulSoup, I scraped off data from openpowerlifting.org and the interconnected links to each powerlifter's competition history.
 
 I created 24 columns:
-* **Provided data:** *Federation, Date, Location, Sex, Age, Equip, Class, Weight, Squat, Bench, Deadlift*
-* **Engineered from competition history:** *Squat/Bench/Deadlift averages across previous competitions, Squat/Bench/Deadlift averages of standard deviation across previous competitions across the best, Second best squat/bench/deadlift, Squat/Bench/Deadlift average rates of change across previous competitions, Count of competition history*
+* **11 Provided from HTML:** *Federation, Date, Location, Sex, Age, Equip, Class, Weight, Squat, Bench, Deadlift*
+* **13 Engineered from competition history:** 
+  * Squat/Bench/Deadlift averages across previous competitions
+  * Squat/Bench/Deadlift averages of standard deviation across previous competitions across the best
+  * Second best squat/bench/deadlift
+  * Squat/Bench/Deadlift average rates of change across previous competitions
+  * Count of competition history*
 
 ## Data Cleaning
 * Dropped duplicate powerlifters
@@ -28,7 +33,11 @@ I created 24 columns:
 
 ## Feature Engineering
 * CatBoost encoded all categorical variables
-* **Engineered 6 new columns:** Month, Season, Year, Country, State, Number of records in past year of the same class, Number of days since last record in the same class
+* Created 6 new columns:
+  * Parsed Date column into Month, Season, and Year columns
+  * Parsed Location column into Country and State columns
+  * Created column for Number of records in the past year of the same Class
+  * Created column for Number of days since the last record in the same Class
 
 ## Exploratory Data Analysis
 * Observed the distributions of continuous variables and the counts of categoricals
@@ -47,7 +56,7 @@ I created 24 columns:
 
 * Wearing wraps boosts one's performance on squat, bench, and deadlift, as opposed to not wearing wraps.
 
-![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/wraps_against_squat.png) <!-- .element height="60%" width="60%" -->
+![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/wraps_against_squat.png) <!-- .element height="50%" width="50%" -->
 
 * Some nationalities are much stronger on-average than others, and others are much weaker on-average than others. Crucially, these nationalities have very few competitors and are unlikely to be representative of the population (<5). With more competitors, we should expect a regression to the mean, and thus, smaller differences in strength between nationalities.
 
