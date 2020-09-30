@@ -2,7 +2,7 @@
 **Goal:** To predict the squat, bench, and deadlift (DVs) of powerlifters
 * Scraped ~10,000 powerlifting records and competition histories from 1000s of interconnected URLs using Selenium and BeautifulSoup
 * Imputed nulls with MICE
-* Engineered 12 new columns, such as average competition sq/bn/dl, average rate of change in sq/bn/dl, and second best competition sq/bn/dl
+* Engineered 20 new columns, such as average competition sq/bn/dl, average rate of change in sq/bn/dl, and second best competition sq/bn/dl
 * CatBoost encoded all categorical variables
 * Optimized Multiple Linear Regression, Lasso, and Random Forest Regressor...
 * Productionized...
