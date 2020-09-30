@@ -33,6 +33,7 @@ Using Selenium and BeautifulSoup, I scraped off data from openpowerlifting.org a
 * Created scatterplots of each continuous variable against the DVs, as well as correlation dataframes
 * Created box and violin plots of categorical variables against the DVs, as well as pivot tables
 * Ran Kruskal-Wallis H-tests to observe if differences exist in the medians
+  * fdf
 
 ## Model Building
 
