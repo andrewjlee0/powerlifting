@@ -46,6 +46,7 @@ I created 24 columns:
 * Ran Kruskal-Wallis H-tests to observe if differences exist in the medians
 
 **Some interesting takeaways (more included in file):**
+* Average squat, bench, and deadlift are 597.7 lbs, 381.4 lbs, and 626.1 lbs respectively
 * Surprisingly, age is a very weak predictor of squat/bench/deadlift (r<0.1)
 * Strong predictors include weight, measures of one's powerlifting history, and one's current best squat/bench/deadlift (r>0.7). These support two conclusions:
   * Powerlifters are strong all-around and well-proportioned
