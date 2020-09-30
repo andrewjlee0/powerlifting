@@ -50,7 +50,7 @@ I created 24 columns:
 * Surprisingly, age is a very weak predictor of squat/bench/deadlift (r<0.1)
 * Strong predictors include weight, measures of one's powerlifting history, and one's current best squat/bench/deadlift (r>0.7). These support two conclusions:
   * Powerlifters are strong all-around and well-proportioned
-  * The past reliably predicts the future
+  * Past performance reliably predicts future performance
 
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/squat_avg_avg_against_squat.png) <!-- .element height="20%" width="20%" -->
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/squat_corr.png) <!-- .element height="20%" width="20%" -->
