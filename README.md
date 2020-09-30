@@ -28,9 +28,10 @@ Using Selenium and BeautifulSoup, I scraped data off openpowerlifting.org and da
 * Engineered 6 new columns: month, season, year, country, state, number of records in past year of the same class, number of days since last record in the same class
 
 ## Exploratory Data Analysis
-To observe the spread of the data, I observed the distributions of continuous variables and the counts of categoricals. For each continuous variable, I created a scatterplot against the dependent variables, providing a glance at each variable's predictability. To follow up on this, a correlation dataframe was made. For the categorical variables, I created box and violin plots against the dependent variables, running Kruskal-Wallis H-tests to observe if differences exist in the medians. Pivot tables provided numerical insight into the box and violint plots.
-**Results:**
-* If you bench well or have a history of benching well, you probably squat and deadlift well and have a history of squatting and deadlifting well, too. This means that if you are a powerlifter, you are strong all-around and your physique is probably well-proportioned. This makes sense, since your overall score in powerlifting depends on the total of your three scores, meaning there is an incentive to be good at each exercise.
+* Observed the distributions of continuous variables and the counts of categoricals
+* Created scatterplots of each continuous variable against the DVs, as well as correlation dataframes
+* Created box and violin plots of categorical variables against the DVs, as well as pivot tables
+* Ran Kruskal-Wallis H-tests to observe if differences exist in the medians
 
 ## Model Building
 
