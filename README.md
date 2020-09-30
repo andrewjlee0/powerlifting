@@ -12,7 +12,7 @@
 
 
 ## Web Scraping
-Using Selenium and BeautifulSoup, I scraped data off openpowerlifting.org and data from the associated links to each powerlifter's competition history.
+Using Selenium and BeautifulSoup, I scraped off data from openpowerlifting.org and the interconnected links to each powerlifter's competition history.
 
 26 columns:
 * **Provided data:** *Federation, Date, Location, Sex, Age, Equip, Class, Weight, Squat, Bench, Deadlift, Total, Dots (score)*
@@ -26,7 +26,7 @@ Using Selenium and BeautifulSoup, I scraped data off openpowerlifting.org and da
 
 ## Feature Engineering
 * CatBoost encoded all categorical variables
-* Engineered 6 new columns: month, season, year, country, state, number of records in past year of the same class, number of days since last record in the same class
+* Engineered 6 new columns: Month, Season, Year, Country, State, Number of records in past year of the same class, Number of days since last record in the same class
 
 ## Exploratory Data Analysis
 * Observed the distributions of continuous variables and the counts of categoricals
