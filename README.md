@@ -8,7 +8,9 @@
 
 ## Resources
 **Version:** Python 3.7
+
 **Packages:** pandas, numpy, matplotlib, seaborn, sklearn, selenium, flask, pickle
+
 **Flask Tutorial:** https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2
 
 ## Web Scraping
@@ -21,7 +23,8 @@ I created 24 columns:
 ## Data Cleaning
 * Dropped duplicate powerlifters
 * Filled missing Class values by calculating from Weight
-* Recoded columns types
+* Cleaned Age column and recast to int type
+* Recast Date column to datetime object
 * Imputed remaining nulls with MICE
 
 ## Feature Engineering
