@@ -7,11 +7,9 @@
 * Productionized...
 
 ## Resources
-**Version:** Python 3.7
-
-**Packages:** pandas, numpy, matplotlib, seaborn, sklearn, selenium, flask, pickle
-
-**Flask Tutorial:** https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2
+* **Version:** Python 3.7
+* **Packages:** pandas, numpy, matplotlib, seaborn, sklearn, selenium, flask, pickle
+* **Flask Tutorial:** https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2
 
 ## Web Scraping
 Using Selenium and BeautifulSoup, I scraped off data from openpowerlifting.org and the interconnected links to each powerlifter's competition history.
@@ -29,7 +27,7 @@ I created 24 columns:
 
 ## Feature Engineering
 * CatBoost encoded all categorical variables
-**Engineered 6 new columns:** Month, Season, Year, Country, State, Number of records in past year of the same class, Number of days since last record in the same class
+* **Engineered 6 new columns:** Month, Season, Year, Country, State, Number of records in past year of the same class, Number of days since last record in the same class
 
 ## Exploratory Data Analysis
 * Observed the distributions of continuous variables and the counts of categoricals
@@ -43,8 +41,8 @@ I created 24 columns:
   * Powerlifters are strong all-around and well-proportioned
   * The past reliably predicts the future
 
-![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/squat_avg_avg_against_squat.png)
-![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/squat_corr.png)
+![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/squat_avg_avg_against_squat.png) <!-- .element height="60%" width="60%" -->
+![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/squat_corr.png) <!-- .element height="60%" width="60%" -->
 
 * Wearing wraps boosts one's performance on squat, bench, and deadlift, as opposed to not wearing wraps.
 
