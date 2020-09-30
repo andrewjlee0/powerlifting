@@ -33,7 +33,16 @@ Using Selenium and BeautifulSoup, I scraped off data from openpowerlifting.org a
 * Created scatterplots of each continuous variable against the DVs, as well as correlation dataframes
 * Created box and violin plots of categorical variables against the DVs, as well as pivot tables
 * Ran Kruskal-Wallis H-tests to observe if differences exist in the medians
-  * fdf
+
+A few interesting takeaways (more included in file):
+* Surprisingly, age is a very weak predictor of squat/bench/deadlift (r<0.1). Varieties of strength exist across the age spectrum.
+* Strong predictors include weight, measures of one's powerlifting history, and one's current best squat/bench/deadlift (r>0.7). These support two conclusions:
+ * Powerlifters are strong all-around and well-proportioned
+ * The past reliably predicts the future
+* Wearing wraps boosts one's performance on squat, bench, and deadlift, as opposed to not wearing wraps.
+* Some nationalities are much stronger on-average than others, and others are much weaker on-average than others. Crucially, these nationalities have very few competitors and are unlikely to be representative of the population (<5). With more competitors, we should expect a regression to the mean, and thus, smaller differences in strength between nationalities.
+
+
 
 ## Model Building
 
