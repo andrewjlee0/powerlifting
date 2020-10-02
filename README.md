@@ -3,7 +3,7 @@
 * Scraped ~10,000 powerlifting records and competition histories from 1000s of interconnected URLs using Selenium and BeautifulSoup
 * Engineered 20 new columns, such as average competition sq/bn/dl, average rate of change in sq/bn/dl, and second best competition sq/bn/dl
 * CatBoost encoded all categorical variables, and imputed nulls with MICE
-* Optimized Multiple Linear Regression, Lasso, and Random Forest Regressor...
+* Compared Multiple Linear Regression, Lasso, and Random Forest Regressor with MAE and RMSE (normalized to mean)
 * Productionized...
 
 ## Resources
@@ -15,7 +15,7 @@
 Using Selenium and BeautifulSoup, I scraped off data from openpowerlifting.org and the interconnected links to each powerlifter's competition history.
 
 I created 24 columns:
-* **11 Provided from HTML:** *Federation, Date, Location, Sex, Age, Equip, Class, Weight, Squat, Bench, Deadlift*
+* **11 Parsed from HTML:** *Federation, Date, Location, Sex, Age, Equip, Class, Weight, Squat, Bench, Deadlift*
 * **13 Engineered from competition history:** 
   * Squat/Bench/Deadlift averages across previous competitions
   * Squat/Bench/Deadlift averages of standard deviation across previous competitions across the best
@@ -57,14 +57,14 @@ I created 24 columns:
 
 * Wearing wraps boosts one's performance on squat, bench, and deadlift, as opposed to not wearing wraps.
 
-![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/wraps_against_squat.png) <!-- .element height="50%" width="50%" -->
+![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/wraps_against_squat.png) <!-- .element height="30%" width="30%" -->
 
 * Some nationalities are much stronger on-average than others, and others are much weaker on-average than others. Crucially, these nationalities have very few competitors and are unlikely to be representative of the population (<5). With more competitors, we should expect a regression to the mean, and thus, smaller differences in strength between nationalities.
 
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/nationality_pivot.png) <!-- .element height="50%" width="50%" -->
 
 ## Model Building
-After CatBoost encoding the models, I split the data into a train and test set of 80% to 20%.I compared three regression algorithms. Because there were 3 DVs (squat, bench, deadlift), I created 9 models in total:
+After CatBoost encoding the models, I split the data into a train and test set of 80% to 20%. I compared three regression algorithms, one for each DV, for a total of 9 models:
 
 * **Linear:** Baseline model
 * **Lasso:** A method that reduces the coefficients of each variable to zero relative to their prediction error (i.e. importance) via regularization, which reduces overfitting
@@ -87,3 +87,13 @@ I retrieved the MAE, RMSE, and normalized RMSE (RMSE/mean of DV) of each model:
 
 ## Productionizing
 
+
+## Further Improvments
+Models can always be improved. As I continue to learn more optimization techniques, I recognize the ways I could have reduced the RMSE even further:
+* Pull more data points from openpowerlifting.org
+* Use GridsearchCV to optimize model hyperparameters, in addition to the model parameters
+* Remove outliers
+* Use ensemble methods
+* Try using PCA
+* Add a cross-validation set
+* Impute the DVs to add around 50 more rows of data
