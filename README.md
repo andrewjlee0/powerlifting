@@ -64,7 +64,26 @@ I created 24 columns:
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/nationality_pivot.png) <!-- .element height="50%" width="50%" -->
 
 ## Model Building
+After CatBoost encoding the models, I split the data into a train and test set of 80% to 20%.I compared three regression algorithms. Because there were 3 DVs (squat, bench, deadlift), I created 9 models in total:
 
+* **Linear:** Baseline model
+* **Lasso:** A method that reduces the coefficients of each variable to zero relative to their prediction error (i.e. importance) via regularization, which reduces overfitting
+* **Random Forest:** Broadly, a combination of decision trees whose outputs are averaged to provide a single output
+
+**Evaluation Metrics:**
+I retrieved the MAE, RMSE, and normalized RMSE (RMSE/mean of DV) of each model:
+* **Squat:** mean=597.7 lbs, stdev=123.5 lbs
+  * Linear: MAE=30.5, RMSE=41.8, NRMSE=0.0699
+  * Lasso: MAE=30.5, RMSE=41.5, NRMSE=0.0694
+  * Random Forest: MAE=24.1, RMSE=35.1, NRMSE=0.0587
+* **Bench:** mean=381.4 lbs, stdev=87.4 lbs
+  * Linear: MAE=16.8, RMSE=23.6, NRMSE=0.0618
+  * Lasso: MAE=16.8, RMSE=23.6, NRMSE=0.0618
+  * Random Forest: MAE=15.3, RMSE=21.9, NRMSE=0.0574
+* **Deadlift:** mean=626.1 lbs, stdev=103.3
+  * Linear: MAE=16.4, RMSE=22.6, NRMSE=0.0360
+  * Lasso: MAE=16.5, RMSE=22.6, NRMSE=0.0360
+  * Random Forest: MAE=16.7, RMSE=22.5, NRMSE=0.0359
 
 ## Productionizing
 
