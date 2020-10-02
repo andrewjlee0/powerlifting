@@ -1,5 +1,5 @@
 # Powerlifting Data Science Project
-**Goal:** To predict the squat, bench, and deadlift (DVs) of powerlifters
+**Goal:** To predict the best competition squat, bench, and deadlift (DVs) of powerlifters
 * Scraped ~10,000 powerlifting records and competition histories from 1000s of interconnected URLs using Selenium and BeautifulSoup
 * Engineered 20 new columns, such as average competition sq/bn/dl, average rate of change in sq/bn/dl, and second best competition sq/bn/dl
 * CatBoost encoded all categorical variables, and imputed nulls with MICE
@@ -98,4 +98,4 @@ Models can always be improved. As I continue to learn more optimization techniqu
 * Use ensemble methods
 * Try using PCA
 * Add a cross-validation set
-* Impute the DVs to add around 50 more rows of data
+* Impute the DVs to add around 1% more rows of data
