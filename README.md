@@ -4,12 +4,12 @@
 * Engineered 20 new columns, such as average competition sq/bn/dl, average rate of change in sq/bn/dl, and second best competition sq/bn/dl
 * CatBoost encoded all categorical variables, and imputed nulls with MICE
 * Compared Multiple Linear Regression, Lasso, and Random Forest Regressor with MAE and RMSE (normalized to mean)
-* Productionized...
+* Deployed Flask model (only for deadlift) to Heroku: https://predicting-deadlift.herokuapp.com
 
 ## Resources
 * **Version:** Python 3.7
 * **Packages:** pandas, numpy, matplotlib, seaborn, sklearn, selenium, flask, pickle
-* **Flask Tutorial:** https://towardsdatascience.com/productionize-a-machine-learning-model-with-flask-and-heroku-8201260503d2
+* **Flask and Heroku Tutorial:** https://blog.cambridgespark.com/deploying-a-machine-learning-model-to-the-web-725688b851c7
 
 ## Web Scraping
 Using Selenium and BeautifulSoup, I scraped off data from openpowerlifting.org and the interconnected links to each powerlifter's competition history.
@@ -88,7 +88,7 @@ I retrieved the MAE, RMSE, and normalized RMSE (RMSE/mean of DV) of each model:
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/model_performance_squat.png) <!-- .element height="100%" width="100%" -->
 
 ## Productionizing
-
+Using an article, I deployed a flask-wrapped random forest regressor model to heroku here: https://predicting-deadlift.herokuapp.com
 
 ## Further Improvments
 Models can always be improved. As I continue to learn more optimization techniques, I recognize the ways I could have reduced the RMSE even further:
