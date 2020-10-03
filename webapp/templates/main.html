@@ -1,1 +1,128 @@
-
+<!doctype html>
+<html>
+<style>
+form {
+    margin: auto;
+    width: 35%;
+}
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+</style>
+<head>
+    <title>Best Competition Deadlift Model</title>
+</head>
+<div class="result" align="center">
+    {% if result %}
+        {% for variable, value in original_input.items() %}
+            <b>{{ variable }}</b> : {{ value }}
+        {% endfor %}
+        <br>
+        <br> Predicted best competition deadlift:
+           <p style="font-size:50px">{{ result }}</p>
+    {% endif %}
+</div>
+<br>
+<form action="{{ url_for('main') }}" method="POST">
+    <fieldset>
+        <legend>Input values:</legend>
+        Age:
+        <input name="age" type="number" required>
+        <br>
+        <br> Year of competition (ordinal):
+        <input name="year" type="number" required>
+        <br>
+        <br> Number of competitions attended:
+        <input name="num_comps" type="number" required>
+        <br>
+        <br> Month of competition:
+        <input name="month" type="number" required>
+        <br>
+        <br> Standard deviation of previous competition squats:
+        <input name="squat_std" type="number" required>
+        <br>
+        <br> Standard deviation of previous comeptition bench presses:
+        <input name="bench_std" type="number" required>
+        <br>
+        <br> Second best competition bench press:
+        <input name="bench_second" type="number" required>
+        <br>
+        <br> Average rate of change across all competition squats:
+        <input name="squat_rc" type="number" required>
+        <br>
+        <br> Location of Home (ordinal):
+        <input name="location" type="number" required>
+        <br>
+        <br> Season of competition (ordinal):
+        <input name="season" type="number" required>
+        <br>
+        <br> Number of days since the last best in the same class:
+        <input name="num_days" type="number" required>
+        <br>
+        <br> Number of bests in the past year in the same class:
+        <input name="num_bests" type="number" required>
+        <br>
+        <br> Country of residence (ordinal):
+        <input name="country" type="number" required>
+        <br>
+        <br> Average rate of change across all competition bench presses:
+        <input name="bench_rc" type="number" required>
+        <br>
+        <br> Average rate of change across all competition deadlifts:
+        <input name="dl_rc" type="number" required>
+        <br>
+        <br> Federation (ordinal):
+        <input name="federtion" type="number" required>
+        <br>
+        <br> Date of competition (ordinal):
+        <input name="date" type="number" required>
+        <br>
+        <br> Sex (ordinal):
+        <input name="sex" type="number" required>
+        <br>
+        <br> State of residence (ordinal):
+        <input name="state" type="number" required>
+        <br>
+        <br> Equipment (ordinal):
+        <input name="equip" type="number" required>
+        <br>
+        <br> Standard deviation of previous comeptition deadlifts:
+        <input name="dl_std" type="number" required>
+        <br>
+        <br> Weight Class (ordinal):
+        <input name="class" type="number" required>
+        <br>
+        <br> Second best competition squat:
+        <input name="squat_second" type="number" required>
+        <br>
+        <br> Average competition bench press:
+        <input name="bench_avg" type="number" required>
+        <br>
+        <br> Standard deviation of previous competition bench presses:
+        <input name="bench_std" type="number" required>
+        <br>
+        <br> Average competition deadlift:
+        <input name="dl_avg" type="number" required>
+        <br>
+        <br> Second best competition deadlift:
+        <input name="dl_second" type="number" required>
+        <br>
+        <br> Weight:
+        <input name="weight" type="number" required>
+        <br>
+        <br> Average competition squat:
+        <input name="squat_avg" type="number" required>
+        <br>
+        <br> Best competition deadlift:
+        <input name="dl" type="number" required>
+        <br>
+        <br> Best competition squat:
+        <input name="squat" type="number" required>
+        <br>
+        <br>
+        <input type="submit">
+    </fieldset>
+</form>
+</html>
