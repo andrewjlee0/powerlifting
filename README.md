@@ -93,7 +93,7 @@ I retrieved the MAE, RMSE, and normalized RMSE (RMSE/mean of DV) of each model:
 Using an article, I deployed a flask-wrapped random forest regressor model to heroku here: https://predicting-deadlift.herokuapp.com
 
 ## Further Improvments
-Models can always be improved. As I continue to learn more optimization techniques, I recognize the ways I could have reduced the RMSE even further:
+"All models are wrong, but some are useful." As I continue to learn more optimization techniques, I recognize the ways I could have reduced the RMSE and improve my models even further:
 * Add a cross-validation set
 * Scrape more data
 * Use SelectKBest to choose the most important features and minimize data required from users
