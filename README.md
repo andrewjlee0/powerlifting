@@ -66,7 +66,7 @@ Out of the 31 columns, 24 were from available data:
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/nationality_pivot.png) <!-- .element height="50%" width="50%" -->
 
 ## Model Building
-After CatBoost encoding the models, I split the data into a train and test set of 80% to 20%. I compared three regression algorithms, one for each DV, for a total of 9 models:
+After CatBoost encoding the models, I split the data into train and test sets of 80% to 20%. I compared three regression algorithms, one for each DV, for a total of 9 models:
 
 * **Linear:** Baseline model
 * **Lasso:** A method that reduces the coefficients of each variable to zero relative to their prediction error (i.e. importance) via regularization, which reduces overfitting
