@@ -94,10 +94,11 @@ Using an article, I deployed a flask-wrapped random forest regressor model to he
 
 ## Further Improvments
 Models can always be improved. As I continue to learn more optimization techniques, I recognize the ways I could have reduced the RMSE even further:
-* Pull more data points from openpowerlifting.org
-* Use GridsearchCV to optimize model hyperparameters, in addition to the model parameters
-* Remove outliers
-* Use ensemble methods
-* Try using PCA
 * Add a cross-validation set
+* Pull more data from openpowerlifting.org
+* Use SelectKBest to choose the most important features and minimize data required from users
+* Use GridsearchCV to optimize model hyperparameters, in addition to the model parameters
+* Use ensemble methods
+* Remove outliers
+* Try using PCA
 * Impute the DVs to add around 1% more rows of data
