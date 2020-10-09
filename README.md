@@ -48,20 +48,23 @@ Out of the 31 columns, 24 were from available data:
 * Ran Kruskal-Wallis H-tests to observe if differences exist in the medians
 
 **Some interesting takeaways (more included in file):**
-* Average squat, bench, and deadlift are 597.7 lbs, 381.4 lbs, and 626.1 lbs respectively
-* Surprisingly, age is a very weak predictor of squat/bench/deadlift (r<0.1)
-* Strong predictors include weight, measures of one's powerlifting history, and one's current best squat/bench/deadlift (r>0.7). These support two conclusions:
-  * Past performance reliably predicts future performance
-  * Powerlifters are strong all-around and likely have well-proportioned physiques (as squat/bench/deadlift work out most muscle groups)
+* **Powerlifters are really strong** 
+  * The average squat, bench, and deadlift are 597.7 lbs, 381.4 lbs, and 626.1 lbs respectively
+* **You can be strong at any age** 
+  * Surprisingly, age is a very weak predictor of squat/bench/deadlift (r<0.1)
+* **Past performance reliably predicts future performance; powerlifters are *all-around* strong; and they are likely well-proportioned physically** 
+  * Strong predictors include weight, measures of one's powerlifting history, and one's current best squat/bench/deadlift (r>0.7)
 
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/squat_avg_avg_against_squat.png) <!-- .element height="20%" width="20%" -->
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/squat_corr.png) <!-- .element height="20%" width="20%" -->
 
-* Wearing wraps boosts one's performance on squat, bench, and deadlift, as opposed to not wearing wraps (p<0.01).
+* **You should wear wraps to lift more**
+  * Wearing wraps boosts one's performance on squat, bench, and deadlift, as opposed to not wearing wraps (p<0.01).
 
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/wraps_against_squat.png) <!-- .element height="30%" width="30%" -->
 
-* Some nationalities are much stronger on-average than others, and others are much weaker on-average than others. To explain why, note that these nationalities have very few competitors and are thus unlikely to be representative of the population (<5). With more competitors, we should expect a regression to the mean and smaller disparities in strength.
+* **Some nationalities are much stronger on-average than others, particularly countries in the Middle-East. But...** 
+  * Note that these nationalities have very few competitors and are thus unlikely to be representative of the population (<5). With larger samples, we should expect a regression to the mean and smaller disparities in strength.
 
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/nationality_pivot.png) <!-- .element height="50%" width="50%" -->
 
