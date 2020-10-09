@@ -87,7 +87,7 @@ I retrieved the MAE, RMSE, and normalized RMSE (RMSE/mean of DV) of each model:
   * Lasso: MAE=16.5, RMSE=22.6, nRMSE=0.0360
   * Random Forest: MAE=16.7, RMSE=22.5, nRMSE=0.0359
 
-The normalized RMSE results show that, on average, the error of the predictions are 3% to 6% of the mean weights. This does not mean 3% to 6% error in *accuracy*, (which we could calculate by averging the percentage of each absolute difference between prediction and actual), and this does not provide a glimpse at the variability of the error, which we could get a glimpse of by calculating two nRMSE's from the mean plus/minus 2 standard deviations. We, however, learn that overall the models are not at all far off in predicting the bests of an aggregate of powerlifters, and in particular, we see that the random forest regressors perform the best across all three DV's.
+The normalized RMSE results show that, on average, the error of the predictions are 3% to 6% of the mean weights. This does not mean 3% to 6% error in *accuracy*, (which we could calculate by averging the percentage of each absolute difference between prediction and actual), and this does not tell us the *variability* of the error, which we could peek into by calculating two nRMSE's from the mean plus/minus 2 standard deviations. We, however, learn that overall the models are not at all far off in predicting the bests of an aggregate of powerlifters, and in particular, we see that the random forest regressors perform the best across all three DV's.
 
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/model_performance_squat.png) <!-- .element height="100%" width="100%" -->
 
