@@ -5,7 +5,7 @@
 * Scraped ~10,000 powerlifting records and competition histories from 1000s of interconnected URLs using Selenium and BeautifulSoup
 * Engineered 20 new columns, such as average competition sq/bn/dl, average rate of change in sq/bn/dl, and second best competition sq/bn/dl
 * CatBoost encoded all categorical variables, and imputed nulls with MICE
-* Compared Multiple Linear Regression, Lasso, and Random Forest Regressor with MAE and RMSE (normalized to mean)
+* Compared Multiple Linear Regression, Lasso, and Random Forest Regressors with MAE and RMSE (normalized to mean)
 * Deployed Flask model (only for deadlift) to Heroku: https://predicting-deadlift.herokuapp.com
 
 ## Resources
@@ -23,7 +23,7 @@ Out of the 30 columns, 24 were from available data:
   * Squat/Bench/Deadlift averages of standard deviation across previous competitions across the best
   * Second best squat/bench/deadlift
   * Squat/Bench/Deadlift average rates of change across previous competitions
-  * Count of competition history*
+  * Count of competition history
 
 ## Data Cleaning
 * Dropped duplicate powerlifters
