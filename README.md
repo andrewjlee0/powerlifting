@@ -61,12 +61,12 @@ Out of the 31 columns, 24 were from available data:
 
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/wraps_against_squat.png) <!-- .element height="30%" width="30%" -->
 
-* Some nationalities are much stronger on-average than others, and others are much weaker on-average than others. Crucially, these nationalities have very few competitors and are unlikely to be representative of the population (<5). With more competitors, we should expect a regression to the mean, and thus, smaller differences in strength between nationalities.
+* Some nationalities are much stronger on-average than others, and others are much weaker on-average than others. To explain why, note that these nationalities have very few competitors and are thus unlikely to be representative of the population (<5). With more competitors, we should expect a regression to the mean and smaller disparities in strength.
 
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/nationality_pivot.png) <!-- .element height="50%" width="50%" -->
 
 ## 6. Model Building
-After CatBoost encoding the models, I split the data into train and test sets of 80% to 20%. I compared three regression algorithms, one for each DV, for a total of 9 models:
+After CatBoost encoding the models, I split the data into train and test sets of 80% to 20%. I compared 3 regression algorithms, 1 for each of the 3 DV's, for a total of 9 models:
 
 * **Linear:** Baseline model
 * **Lasso:** A method that reduces the coefficients of each variable to zero relative to their prediction error (i.e. importance) via regularization, which reduces overfitting
@@ -82,7 +82,7 @@ I retrieved the MAE, RMSE, and normalized RMSE (RMSE/mean of DV) of each model:
   * Linear: MAE=16.8, RMSE=23.6, nRMSE=0.0618
   * Lasso: MAE=16.8, RMSE=23.6, nRMSE=0.0618
   * Random Forest: MAE=15.3, RMSE=21.9, nRMSE=0.0574
-* **Deadlift:** mean=626.1 lbs, stdev=103.3
+* **Deadlift:** mean=626.1 lbs, stdev=103.3 lbs
   * Linear: MAE=16.4, RMSE=22.6, nRMSE=0.0360
   * Lasso: MAE=16.5, RMSE=22.6, nRMSE=0.0360
   * Random Forest: MAE=16.7, RMSE=22.5, nRMSE=0.0359
@@ -90,12 +90,12 @@ I retrieved the MAE, RMSE, and normalized RMSE (RMSE/mean of DV) of each model:
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/model_performance_squat.png) <!-- .element height="100%" width="100%" -->
 
 ## 7. Productionizing
-Using the following article (https://blog.cambridgespark.com/deploying-a-machine-learning-model-to-the-web-725688b851c7), I deployed a flask-wrapped random forest regressor model to heroku here: https://predicting-deadlift.herokuapp.com
+Using the following article (https://blog.cambridgespark.com/deploying-a-machine-learning-model-to-the-web-725688b851c7), I deployed a flask-wrapped random forest regressor model to heroku: https://predicting-deadlift.herokuapp.com
 
 ## 8. Further Improvments
 "All models are wrong, but some are useful." And many are in need of improvement!
 
-As I continue to learn more optimization techniques, I recognize the ways I could have reduced the RMSE even further:
+As I continue to learn best practices, I recognize the ways I could have reduced the RMSE even further:
 * Add a cross-validation set
 * Scrape more data
 * Use SelectKBest to choose the most important features and minimize data required from users
