@@ -90,10 +90,12 @@ I retrieved the MAE, RMSE, and normalized RMSE (RMSE/mean of DV) of each model:
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/model_performance_squat.png) <!-- .element height="100%" width="100%" -->
 
 ## Productionizing
-Using an article, I deployed a flask-wrapped random forest regressor model to heroku here: https://predicting-deadlift.herokuapp.com
+Using the following article (https://blog.cambridgespark.com/deploying-a-machine-learning-model-to-the-web-725688b851c7), I deployed a flask-wrapped random forest regressor model to heroku here: https://predicting-deadlift.herokuapp.com
 
 ## Further Improvments
-"All models are wrong, but some are useful." As I continue to learn more optimization techniques, I recognize the ways I could have reduced the RMSE and improve my models even further:
+"All models are wrong, but some are useful." And many are in need of improvement!
+
+As I continue to learn more optimization techniques, I recognize the ways I could have reduced the RMSE even further:
 * Add a cross-validation set
 * Scrape more data
 * Use SelectKBest to choose the most important features and minimize data required from users
