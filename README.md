@@ -16,7 +16,7 @@
 ## Web Scraping
 Using Selenium and BeautifulSoup, I scraped off data from openpowerlifting.org and the interconnected links to each powerlifter's competition history.
 
-Out of the 30 columns, 24 were from available data:
+Out of the 31 columns, 24 were from available data:
 * **11 Parsed from HTML:** *Federation, Date, Location, Sex, Age, Equip, Class, Weight, Squat, Bench, Deadlift*
 * **13 Engineered from competition history:** 
   * Squat/Bench/Deadlift averages across previous competitions
@@ -35,7 +35,7 @@ Out of the 30 columns, 24 were from available data:
 
 ## Feature Engineering
 * CatBoost encoded all categorical variables
-* **Created 6 new columns:**
+* **Created 7 new columns:**
   * Parsed Date column into Month, Season, and Year columns
   * Parsed Location column into Country and State columns
   * Created column for Number of records in the past year of the same Class
