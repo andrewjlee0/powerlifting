@@ -8,12 +8,12 @@
 * Compared Multiple Linear Regression, Lasso, and Random Forest Regressors with MAE and RMSE (normalized to mean)
 * Deployed Flask model (only for deadlift) to Heroku: https://predicting-deadlift.herokuapp.com
 
-## Resources
+## 1. Resources
 * **Version:** Python 3.7
 * **Packages:** pandas, numpy, matplotlib, seaborn, sklearn, selenium, flask, pickle
 * **Flask and Heroku Tutorial:** https://blog.cambridgespark.com/deploying-a-machine-learning-model-to-the-web-725688b851c7
 
-## Web Scraping
+## 2. Web Scraping
 Using Selenium and BeautifulSoup, I scraped off data from openpowerlifting.org and the interconnected links to each powerlifter's competition history.
 
 Out of the 31 columns, 24 were from available data:
@@ -25,7 +25,7 @@ Out of the 31 columns, 24 were from available data:
   * Squat/Bench/Deadlift average rates of change across previous competitions
   * Count of competition history
 
-## Data Cleaning
+## 3. Data Cleaning
 * Dropped duplicate powerlifters
 * Filled missing Class values by calculating from Weight
 * Cleaned Age column and recast to int type
@@ -33,7 +33,7 @@ Out of the 31 columns, 24 were from available data:
 * Recast Class column to string type
 * Imputed remaining nulls with MICE
 
-## Feature Engineering
+## 4. Feature Engineering
 * CatBoost encoded all categorical variables
 * **Created 7 new columns:**
   * Parsed Date column into Month, Season, and Year columns
@@ -41,7 +41,7 @@ Out of the 31 columns, 24 were from available data:
   * Created column for Number of records in the past year of the same Class
   * Created column for Number of days since the last record in the same Class
 
-## Exploratory Data Analysis
+## 5. Exploratory Data Analysis
 * Observed the distributions of continuous variables and the counts of categoricals
 * Created correlation dataframes and scatterplots of each continuous variable against the DVs
 * Created pivot tables and box and violin plots of categorical variables against the DVs
@@ -65,7 +65,7 @@ Out of the 31 columns, 24 were from available data:
 
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/nationality_pivot.png) <!-- .element height="50%" width="50%" -->
 
-## Model Building
+## 6. Model Building
 After CatBoost encoding the models, I split the data into train and test sets of 80% to 20%. I compared three regression algorithms, one for each DV, for a total of 9 models:
 
 * **Linear:** Baseline model
@@ -89,10 +89,10 @@ I retrieved the MAE, RMSE, and normalized RMSE (RMSE/mean of DV) of each model:
 
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/model_performance_squat.png) <!-- .element height="100%" width="100%" -->
 
-## Productionizing
+## 7. Productionizing
 Using the following article (https://blog.cambridgespark.com/deploying-a-machine-learning-model-to-the-web-725688b851c7), I deployed a flask-wrapped random forest regressor model to heroku here: https://predicting-deadlift.herokuapp.com
 
-## Further Improvments
+## 8. Further Improvments
 "All models are wrong, but some are useful." And many are in need of improvement!
 
 As I continue to learn more optimization techniques, I recognize the ways I could have reduced the RMSE even further:
