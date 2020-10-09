@@ -63,8 +63,8 @@ Out of the 31 columns, 24 were from available data:
 
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/wraps_against_squat.png) <!-- .element height="30%" width="30%" -->
 
-* **Some nationalities are much stronger on-average than others, particularly countries in the Middle-East. But...** 
-  * Note that these nationalities have very few competitors and are thus unlikely to be representative of the population (<5). With larger samples, we should expect a regression to the mean and smaller disparities in strength.
+* **Some nationalities are much stronger on-average than others, particularly Eastern Europeans. But...** 
+  * Note that these nationalities have very few competitors and are thus unlikely to be representative of the population (<5). With larger samples, we should expect a regression to the mean and smaller disparities in strength. Until we obtain larger samples, we don't know much smaller the disparity, but we should assume *some* reduction in the disparity.
 
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/nationality_pivot.png) <!-- .element height="50%" width="50%" -->
 
