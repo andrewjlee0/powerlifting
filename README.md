@@ -16,7 +16,7 @@
 ## Web Scraping
 Using Selenium and BeautifulSoup, I scraped off data from openpowerlifting.org and the interconnected links to each powerlifter's competition history.
 
-I created 24 columns:
+Out of the 30 columns, 24 were from available data:
 * **11 Parsed from HTML:** *Federation, Date, Location, Sex, Age, Equip, Class, Weight, Squat, Bench, Deadlift*
 * **13 Engineered from competition history:** 
   * Squat/Bench/Deadlift averages across previous competitions
@@ -35,7 +35,7 @@ I created 24 columns:
 
 ## Feature Engineering
 * CatBoost encoded all categorical variables
-* Created 6 new columns:
+* **Created 6 new columns:**
   * Parsed Date column into Month, Season, and Year columns
   * Parsed Location column into Country and State columns
   * Created column for Number of records in the past year of the same Class
@@ -95,7 +95,7 @@ Using an article, I deployed a flask-wrapped random forest regressor model to he
 ## Further Improvments
 Models can always be improved. As I continue to learn more optimization techniques, I recognize the ways I could have reduced the RMSE even further:
 * Add a cross-validation set
-* Pull more data from openpowerlifting.org
+* Scrape more data
 * Use SelectKBest to choose the most important features and minimize data required from users
 * Use GridsearchCV to optimize model hyperparameters, in addition to the model parameters
 * Use ensemble methods
