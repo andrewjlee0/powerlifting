@@ -51,13 +51,13 @@ Out of the 30 columns, 24 were from available data:
 * Average squat, bench, and deadlift are 597.7 lbs, 381.4 lbs, and 626.1 lbs respectively
 * Surprisingly, age is a very weak predictor of squat/bench/deadlift (r<0.1)
 * Strong predictors include weight, measures of one's powerlifting history, and one's current best squat/bench/deadlift (r>0.7). These support two conclusions:
-  * Powerlifters are strong all-around and well-proportioned
   * Past performance reliably predicts future performance
+  * Powerlifters are strong all-around and likely have well-proportioned physiques (as squat/bench/deadlift work out most muscle groups)
 
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/squat_avg_avg_against_squat.png) <!-- .element height="20%" width="20%" -->
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/squat_corr.png) <!-- .element height="20%" width="20%" -->
 
-* Wearing wraps boosts one's performance on squat, bench, and deadlift, as opposed to not wearing wraps.
+* Wearing wraps boosts one's performance on squat, bench, and deadlift, as opposed to not wearing wraps (p<0.01).
 
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/wraps_against_squat.png) <!-- .element height="30%" width="30%" -->
 
@@ -75,17 +75,17 @@ After CatBoost encoding the models, I split the data into a train and test set o
 **Evaluation Metrics:**
 I retrieved the MAE, RMSE, and normalized RMSE (RMSE/mean of DV) of each model:
 * **Squat:** mean=597.7 lbs, stdev=123.5 lbs
-  * Linear: MAE=30.5, RMSE=41.8, NRMSE=0.0699
-  * Lasso: MAE=30.5, RMSE=41.5, NRMSE=0.0694
-  * Random Forest: MAE=24.1, RMSE=35.1, NRMSE=0.0587
+  * Linear: MAE=30.5, RMSE=41.8, nRMSE=0.0699
+  * Lasso: MAE=30.5, RMSE=41.5, nRMSE=0.0694
+  * Random Forest: MAE=24.1, RMSE=35.1, nRMSE=0.0587
 * **Bench:** mean=381.4 lbs, stdev=87.4 lbs
-  * Linear: MAE=16.8, RMSE=23.6, NRMSE=0.0618
-  * Lasso: MAE=16.8, RMSE=23.6, NRMSE=0.0618
-  * Random Forest: MAE=15.3, RMSE=21.9, NRMSE=0.0574
+  * Linear: MAE=16.8, RMSE=23.6, nRMSE=0.0618
+  * Lasso: MAE=16.8, RMSE=23.6, nRMSE=0.0618
+  * Random Forest: MAE=15.3, RMSE=21.9, nRMSE=0.0574
 * **Deadlift:** mean=626.1 lbs, stdev=103.3
-  * Linear: MAE=16.4, RMSE=22.6, NRMSE=0.0360
-  * Lasso: MAE=16.5, RMSE=22.6, NRMSE=0.0360
-  * Random Forest: MAE=16.7, RMSE=22.5, NRMSE=0.0359
+  * Linear: MAE=16.4, RMSE=22.6, nRMSE=0.0360
+  * Lasso: MAE=16.5, RMSE=22.6, nRMSE=0.0360
+  * Random Forest: MAE=16.7, RMSE=22.5, nRMSE=0.0359
 
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/model_performance_squat.png) <!-- .element height="100%" width="100%" -->
 
