@@ -60,8 +60,8 @@ Out of the 31 columns, 24 were from available data:
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/squat_avg_avg_against_squat.png) <!-- .element height="20%" width="20%" -->
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/squat_corr.png) <!-- .element height="20%" width="20%" -->
 
-* **You should wear wraps to lift more**
-  * Wearing wraps boosts one's performance on squat, bench, and deadlift, as opposed to not wearing wraps (p<0.01).
+* **Wearing wraps probably helps with lifting more**
+  * Wearing wraps boosts one's performance on squat, bench, and deadlift, as opposed to not wearing wraps (p<0.01). However, since this data is not from an experiment, drawing causality becomes murky. The best we can say is that lifters who wear wraps do indeed lift more than raw lifters.
 
 ![alt text](https://github.com/andrewjlee0/powerlifting/blob/master/images/wraps_against_squat.png) <!-- .element height="30%" width="30%" -->
 
